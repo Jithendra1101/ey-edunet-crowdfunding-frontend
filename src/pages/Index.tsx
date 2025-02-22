@@ -31,10 +31,10 @@ const SAMPLE_CAMPAIGNS = [
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-purple-50 to-white">
-      <div className="container px-4 py-8 mx-auto">
-        <header className="text-center mb-12 space-y-4 animate-fade-in">
-          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+    <div className="bg-gradient-to-b from-purple-50 to-white">
+      <div className="container px-4 py-12 mx-auto">
+        <header className="text-center mb-16 space-y-4 animate-fade-in">
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-purple-600">
             Make a Difference
           </h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -42,14 +42,19 @@ const Index = () => {
           </p>
         </header>
 
-        <div className="grid grid-cols-1 gap-8 mb-12">
+        <div className="grid grid-cols-1 gap-8 mb-16">
           <AuthForm />
         </div>
 
-        <section className="space-y-8">
-          <h2 className="text-2xl font-bold tracking-tight text-center">
-            Featured Campaigns
-          </h2>
+        <section className="space-y-12">
+          <div className="text-center space-y-4">
+            <h2 className="text-3xl font-bold tracking-tight">
+              Featured Campaigns
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Discover projects making real impact in communities around the world
+            </p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {SAMPLE_CAMPAIGNS.map((campaign, index) => (
               <CampaignCard key={index} {...campaign} />
