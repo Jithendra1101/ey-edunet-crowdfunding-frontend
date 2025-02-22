@@ -1,6 +1,8 @@
 
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Link } from "react-router-dom";
+import { AuthForm } from "@/components/auth/AuthForm";
 
 export const Header = () => {
   return (
@@ -27,9 +29,16 @@ export const Header = () => {
             <Button variant="outline" className="hidden sm:inline-flex">
               Start a Campaign
             </Button>
-            <Button className="bg-primary hover:bg-primary/90">
-              Sign In
-            </Button>
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button className="bg-primary hover:bg-primary/90">
+                  Sign In
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-md">
+                <AuthForm />
+              </DialogContent>
+            </Dialog>
           </div>
         </div>
       </div>

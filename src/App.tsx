@@ -6,6 +6,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import Index from "./pages/Index";
+import Explore from "./pages/Explore";
+import HowItWorks from "./pages/HowItWorks";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -17,6 +19,8 @@ const App = () => (
         <Layout>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/explore" element={<Explore />} />
+            <Route path="/how-it-works" element={<HowItWorks />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>

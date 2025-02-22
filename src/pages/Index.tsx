@@ -1,4 +1,3 @@
-
 import { AuthForm } from "@/components/auth/AuthForm";
 import { CampaignCard } from "@/components/campaign/CampaignCard";
 
@@ -41,10 +40,6 @@ const Index = () => {
             Support meaningful projects and help create positive change in your community
           </p>
         </header>
-
-        <div className="grid grid-cols-1 gap-8 mb-16">
-          <AuthForm />
-        </div>
 
         <section className="space-y-12">
           <div className="text-center space-y-4">
